@@ -4,13 +4,16 @@
 | Task Purpose : 
 |      1. Setting (USER MUST MODIFY)  
 |      2. Creation of format library for Charlson Comorbidity Groups 
-|      3. 00
-|      4. 00
+|      3. Created a cohort of patients with patient_id and index_date
+|      4. First macro - restrain data to within n-month prior of the index_date and tranpose the data
+|      5. Second macro - stack all files produced from the first macro and produce final comorbidity scores
 | Final dataset : 
+|      1. library.ch_fmt | Format library for Charlson Comorbidity Groups
+|      2. library.comorb_mscan | stack all files produced from the first macro and produce final comorbidity scores
 ************************************************************************************/
 
 /************************************************************************************
-	 1. Set up the environment (USER MUST MODIFY)   
+   1. Set up the environment (USER MUST MODIFY)   
 ************************************************************************************/
 
 * 1.1. Access to Server;
@@ -41,14 +44,9 @@ libname mscan "/dcl02/alexande/data/MARKETSCAN2024";
 libname library "/users/mkim/mscan";
 
 /************************************************************************************
-	 2. Creation of format library for Charlson Comorbidity Groups : 
+   2. Creation of format library for Charlson Comorbidity Groups : 
       ICD-10-CM and ICD-9-CM Comorbidity Software, 2021 version
 ************************************************************************************/
-
-/**************************************************
-* new table: library.ch_fmt
-* description: Format library using ICD-10-CM and ICD-9-CM
-**************************************************/
 
 Proc format lib=library cntlout=library.ch_fmt;
    Value $ch_comfmt
@@ -108,13 +106,8 @@ run;
 
 
 /************************************************************************************
-	 3.  Created a cohort of patients with patient_id and index_date
+   3. Created a cohort of patients with patient_id and index_date
 ************************************************************************************/
-
-/**************************************************
-* new table: cohort
-* description: list of patient_id and index_date for your study population (library.cohort)
-**************************************************/
 
 data cohort;
 	set library.cohort;
@@ -124,7 +117,7 @@ proc sort data=cohort; by enrolid; run;
 
 
 /************************************************************************************
-	 4.  First macro - restrain data to within n-month prior of the index_date and tranpose the data
+   4. First macro - restrain data to within n-month prior of the index_date and tranpose the data
 ************************************************************************************/
 
 %macro claims (out_file, 	 /* This is the output file from this macro. It will have patient_ids with diagnosis dates and diagnosis codes in long format.
@@ -175,7 +168,7 @@ proc sort data=cohort; by enrolid; run;
 
 
 /************************************************************************************
-	 5.  Second macro - stack all files produced from the first macro and produce final comorbidity scores
+   5. Second macro - stack all files produced from the first macro and produce final comorbidity scores
 ************************************************************************************/
 
 %macro comorb(in_file,
