@@ -41,6 +41,7 @@ sas -helpbrowser SAS -xrm "SAS.webBrowser:'/usr/bin/chromium-browser'" -xrm "SAS
 
 * 1.3. Set library;
 libname mscan "/dcl02/alexande/data/MARKETSCAN2024";
+libname sydney "/fastscratch/myscratch/slewis/shared_with_mkim";
 libname library "/users/mkim/mscan";
 
 /************************************************************************************
