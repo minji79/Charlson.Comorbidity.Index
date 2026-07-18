@@ -1,0 +1,26 @@
+NOTE: Jenner v1.5.37 (build v1.5.37+886f95a5f1.20260717T051227Z.x86_64-unknown-linux-gnu)
+
+NOTE: Option OBS changed to 100.
+NOTE: DATA comorb_ind
+
+NOTE: Processing inline DATALINES (5 lines)
+
+NOTE: Read 5 rows from DATALINES.
+NOTE: Wrote comorb_ind (5 rows, 19 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA scored
+
+
+NOTE: Read 5 rows from comorb_ind.
+NOTE: Wrote scored (5 rows, 20 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC PRINT data=scored
+
+NOTE: PROC PRINT completed: 5 observations printed, 2 variables
+NOTE: PROC MEANS
+NOTE: PROC MEANS statement used.
+

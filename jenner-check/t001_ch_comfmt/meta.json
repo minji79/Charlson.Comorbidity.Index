@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_ch_comfmt",
+  "source_file": "Charlson Score for Marketscan.sas",
+  "source_blob_sha": "3d1585ac2b285bbf2d1bb73fbbedf1585af5f911",
+  "source_commit": "ec914928c8f2e17ddedbd4ed8054ee18e21a7b50",
+  "notes": "Upstream's $ch_comfmt PROC FORMAT (ICD-10-CM/ICD-9-CM -> 18 Charlson comorbidity groups, 217 ranges) built into WORK instead of the external format library, then applied via put(dgn_cd, $CH_COMFMT.) — the classification step from the comorb macro (step 3). Sample of 11 diagnosis codes replaces the external MarketScan claim files. PROC PRINT + PROC FREQ show the codes classified into groups."
+}

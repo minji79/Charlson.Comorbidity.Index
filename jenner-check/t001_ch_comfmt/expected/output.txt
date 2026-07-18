@@ -1,0 +1,29 @@
+                              Diagnosis codes classified into Charlson comorbidity groups
+
+                  ch_com  enrolid  dgn_cd
+NCI_CH1_ACUTE_MI          1001     I2109
+NCI_CH9_DIABETES          1001     E119
+NCI_CH3_CHF               1002     I509
+NCI_CH11_RENAL_DISEASE    1002     N185
+NCI_CH17_CANCER           1003     C509
+NCI_CH12_MILD_LIVER_DISE  1004     K7030
+                          1005     B20
+                          1006     250
+                          1006     M0590
+NCI_CH8_PARALYSIS         1007     G8194
+                          1008     99999
+
+                                             Comorbidity group frequencies
+
+                                                   The FREQ Procedure
+
+ch_com                      Frequency    Percent
+-------------------------------------------------
+NCI_CH11_RENAL_DISEASE              1     14.29
+NCI_CH12_MILD_LIVER_DISE            1     14.29
+NCI_CH17_CANCER                     1     14.29
+NCI_CH1_ACUTE_MI                    1     14.29
+NCI_CH3_CHF                         1     14.29
+NCI_CH8_PARALYSIS                   1     14.29
+NCI_CH9_DIABETES                    1     14.29
+

@@ -1,0 +1,7 @@
+{
+  "bundle": "t003_charlson_score",
+  "source_file": "Charlson Score for Marketscan.sas",
+  "source_blob_sha": "3d1585ac2b285bbf2d1bb73fbbedf1585af5f911",
+  "source_commit": "ec914928c8f2e17ddedbd4ed8054ee18e21a7b50",
+  "notes": "Upstream's step-8 Charlson Comorbidity Index weighting expression, verbatim. The 18 binary comorbidity indicators (normally produced by the comorb macro's glmselect/summary steps against external MarketScan data) are supplied as a small patient-level 0/1 dataset. Verifies the weighted sum including the 'and not' suppression for diabetes (CH9 suppressed by CH10) and mild-vs-severe liver disease (CH12 suppressed by CH13). Scores: P01=2, P02=5, P03=7, P04=12, P05=0, mean 5.20."
+}

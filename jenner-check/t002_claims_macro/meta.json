@@ -1,0 +1,7 @@
+{
+  "bundle": "t002_claims_macro",
+  "source_file": "Charlson Score for Marketscan.sas",
+  "source_blob_sha": "3d1585ac2b285bbf2d1bb73fbbedf1585af5f911",
+  "source_commit": "ec914928c8f2e17ddedbd4ed8054ee18e21a7b50",
+  "notes": "Upstream's %claims macro verbatim, driven by a small caller. Upstream calls it against external MarketScan libname files (mscan.ccae_f/ccae_s/...); here a mock claim file (enrolid + svcdate + DX1-DX4) and cohort (enrolid + index_date) with the same column shape replace them. Exercises the merge-by-patient, the intnx 12-month date-window filter, the array dgns_cd(*) transpose to long format, and the data_type tag. temp1 keeps 5 in-window rows, transpose yields 7 diagnosis rows."
+}
