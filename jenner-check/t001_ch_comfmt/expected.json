@@ -1,0 +1,14 @@
+{
+  "_captured_at": "2026-07-18T10:10:00Z",
+  "_captured_run_id": "see meta.json",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: PROC FORMAT library=WORK",
+    "NOTE: FORMAT $ch_comfmt defined (217 ranges).",
+    "NOTE: Wrote classified (11 rows, 3 columns).",
+    "NOTE: PROC PRINT completed: 11 observations printed, 3 variables"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

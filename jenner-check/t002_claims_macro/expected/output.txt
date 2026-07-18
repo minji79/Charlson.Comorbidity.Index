@@ -1,0 +1,12 @@
+                     claims macro output: long-format diagnosis rows within 12 months of index_date
+
+enrolid  claim_date  DGN_CD  data_type
+1001     01/10/2023  I2109   I
+1001     01/10/2023  E119    I
+1001     02/20/2023  I509    I
+1002     12/05/2022  C509    I
+1002     12/05/2022  N185    I
+1003     05/15/2023  G8194   I
+1003     05/15/2023  B20     I
+
+

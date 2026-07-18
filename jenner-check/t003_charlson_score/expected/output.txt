@@ -1,0 +1,19 @@
+                                         Charlson Comorbidity Index per patient
+
+enrolid  Charlson
+P01             2
+P02             5
+P03             7
+P04            12
+P05             0
+
+                                              Charlson score distribution
+
+                                                  The MEANS Procedure
+
+ Variable        N        Mean     Minimum     Maximum
+ -----------------------------------------------------
+ Charlson        5        5.20        0.00       12.00
+ -----------------------------------------------------
+
+
